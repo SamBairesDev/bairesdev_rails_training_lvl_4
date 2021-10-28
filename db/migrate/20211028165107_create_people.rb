@@ -1,7 +1,7 @@
 class CreatePeople < ActiveRecord::Migration[6.1]
   def change
     create_table :people do |t|
-      t.string :name
+      t.string :name, null: false
       t.boolean :tag_a
       t.boolean :tag_b
       t.boolean :tag_c
