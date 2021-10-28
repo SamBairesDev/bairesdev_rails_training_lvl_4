@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_28_165253) do
+ActiveRecord::Schema.define(version: 2021_10_28_172757) do
 
   create_table "clients", force: :cascade do |t|
     t.integer "person_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_clients_on_deleted_at"
     t.index ["person_id"], name: "index_clients_on_person_id"
   end
 
@@ -23,6 +25,8 @@ ActiveRecord::Schema.define(version: 2021_10_28_165253) do
     t.integer "person_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_employees_on_deleted_at"
     t.index ["person_id"], name: "index_employees_on_person_id"
   end
 
@@ -36,6 +40,8 @@ ActiveRecord::Schema.define(version: 2021_10_28_165253) do
     t.integer "role_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_people_on_deleted_at"
     t.index ["project_id"], name: "index_people_on_project_id"
     t.index ["role_id"], name: "index_people_on_role_id"
   end
@@ -44,12 +50,16 @@ ActiveRecord::Schema.define(version: 2021_10_28_165253) do
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_projects_on_deleted_at"
   end
 
   create_table "roles", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_roles_on_deleted_at"
   end
 
   add_foreign_key "clients", "people"
