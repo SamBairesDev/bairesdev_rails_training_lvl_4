@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  tag_a: false
+  tag_b: false
+  tag_c: false
+  country: MyString
+  project: one
+  role: one
+
+two:
+  name: MyString
+  tag_a: false
+  tag_b: false
+  tag_c: false
+  country: MyString
+  project: two
+  role: two

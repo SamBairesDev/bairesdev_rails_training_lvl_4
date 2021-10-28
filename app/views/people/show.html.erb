@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Tag a:</strong>
+  <%= @person.tag_a %>
+</p>
+
+<p>
+  <strong>Tag b:</strong>
+  <%= @person.tag_b %>
+</p>
+
+<p>
+  <strong>Tag c:</strong>
+  <%= @person.tag_c %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @person.country %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @person.project_id %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @person.role_id %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
