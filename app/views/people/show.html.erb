@@ -27,12 +27,12 @@
 
 <p>
   <strong>Project:</strong>
-  <%= @person.project_id %>
+  <%= @person.project.name %>
 </p>
 
 <p>
   <strong>Role:</strong>
-  <%= @person.role_id %>
+  <%= @person.role.name %>
 </p>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |

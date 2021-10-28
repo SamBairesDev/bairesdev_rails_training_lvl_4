@@ -24,8 +24,8 @@
         <td><%= person.tag_b %></td>
         <td><%= person.tag_c %></td>
         <td><%= person.country %></td>
-        <td><%= person.project_id %></td>
-        <td><%= person.role_id %></td>
+        <td><%= person.project.name %></td>
+        <td><%= person.role.name %></td>
         <td><%= link_to 'Show', person %></td>
         <td><%= link_to 'Edit', edit_person_path(person) %></td>
         <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
